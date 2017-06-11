@@ -1,0 +1,52 @@
+<?php
+$date = $_GET['date']; // the post data from previous page
+$info = $_GET['info']; // the post data from previous page
+?>  
+
+
+<form action="next_page.php" method="get" name="myForm"> 
+
+
+    <input name="date" type="hidden" value="<?php echo $date; ?>" />
+    <input name="info" type="hidden" value="<?php echo $info; ?>" />
+
+
+
+
+    <?php
+    include(db . php);
+
+
+    $q = "select count(*) \"total\"  from users";
+    $ros1 = mysql_query($q, $link);
+    $row = (mysql_fetch_array($ros1));
+    $total = $row['total'];
+    $dis = 8;
+    $total_page = ceil($total / $dis);
+
+
+    $page_cur = (isset($_GET['page'])) ? $_GET['page'] : 1;
+    $k = ($page_cur - 1) * $dis;
+
+    $query = "SELECT * FROM cars limit $k,$dis";
+    $ros = mysql_query($query, $link);
+
+    while ($row = mysql_fetch_array($ros)) {
+
+        echo $row["user_id"];
+
+        echo $row["user_name"];
+
+        echo $row["user_email"];
+    }
+    for ($i = 1; $i <= $total_page; $i++) {
+        if ($page_cur == $i) {
+            echo ' <input type="button" value="' . $i . '"> ';
+        } else {
+            echo '<a href="carstype.php?page=' . $i . '&date=' . $date . '&info=' . $info . '"> $i </a>';
+        }
+    }
+    ?>
+    <input  type="submit" name="userId" value="' .$row['user_id'] . '" /> 
+
+</form>
