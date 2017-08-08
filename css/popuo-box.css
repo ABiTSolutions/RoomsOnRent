@@ -120,7 +120,8 @@ border-left:1px solid #CCC;
 .mg
 {
 	font-size:20px;
-	color: #006678;
+	/*color: #006678; 	_ANUP*/ 
+	color: #00d5fa;
 }
 
 @media screen and (max-width:900px)

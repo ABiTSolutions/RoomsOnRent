@@ -46,9 +46,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="col-md-12">
 			
-			<div style="position:fixed; z-index:9; right:0; top:40px; margin:15px;">
+			<!-- <div style="position:fixed; z-index:9; right:0; top:40px; margin:15px;">
 				<a href="<?php echo "logout.php"; ?>" class="hvr-sweep-to-right more" style="background:#00d5fa; color:#FFF; font-weight:bold; padding:1em" >Logout</a>     
-			</div>
+			</div> -->
 			
 			<div style="margin-top:50px">
 			

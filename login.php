@@ -122,7 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  <!-- <input name="enterotp" type="submit" class="btn-u" value="Login" style="border: 2px solid #fcfefd; background: #0b8a57; border-radius: 5px; font-size: 16px; font-weight: 600; box-shadow: 7px 7px 5px #289469; color: #ffffff;"  onClick="return loempty()" /> --_ANUP-->
 			  <input name="enterotp" type="submit" class="btn-u hvr-sweep-to-right" value="Login" style="border: 2px solid #fcfefd; background: #00d5fa; border-radius: 5px; font-size: 16px; font-weight: 600; box-shadow: 7px 7px 5px #005b6b; color: #ffffff;"  onClick="return loempty() />
 		
-		<p class="send" style="padding-left:0"><span style="font-size:13px"></span> 
+		<p class="send" style="padding-left:0"><span style="font-size:13px"></span>
 		<!--<input type="submit" onClick="return lempty()" name="sendotp" value="" style="background:url('images/getOTP.png'); background-size:45%; border:none; color: #FFF; width:222px; background-repeat: no-repeat;" /> --_ANUP-->
 									
 		</p>
@@ -229,7 +229,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									}
 									elseif($i==2)
 									{ 
-									
+										if (empty($_POST['mobile']) && empty($_POST['otp'])){
+											//echo "<script>alert('Mobile Number is not exist - Please Register')</script>";
+											echo "<script>swal('Oops...', 'You have entered wrong Mobile Number OR Password!', 'error');</script>";
+										}
+										else
+										{
+											
+										
 										$mobile=$_POST['mobile'];
 										$qu="SELECT mobile FROM `tenant_reg` where mobile = '$mobile'";
 										$sql = @mysqli_query($connection,$qu);
@@ -237,9 +244,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										{
 											$m=$row['mobile'];
 											$name=$row['name'];
+											$mobile=$_POST['mobile'];
 										}
-										$mobile=$_POST['mobile'];
-											if($m==$mobile)
+										
+											/* if($m==$mobile)
 											{
 												//$_COOKIE['mobile']= $mobile;
 												//$_COOKIE['otp']=rand(1000, 9999);
@@ -274,12 +282,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													//Error occured while connecting to server.
 													$Message = $e->getMessage();
 												}
+											} */  // Hidden by _ANUP //
+											if($m==$mobile)
+											{
+													$qu="SELECT password FROM `login_details` where type = 'tenant' ";
+													$sql = @mysqli_query($connection,$qu);
+													while($row=@mysqli_fetch_array($sql))
+													{
+														$p=$row['password'];
+														$pass=$_POST['otp'];
+													}
+													$_SESSION["a"]=$p;
 											}
 											else
 											{
 												//echo "<script>alert('Mobile Number is not exist - Please Register')</script>";
 												echo "<script>swal('Oops...', 'Mobile Number is not exist - Please Register!', 'error');</script>";
 											}
+										}
 										
 									}
 							

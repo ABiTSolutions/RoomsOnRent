@@ -322,11 +322,13 @@ $(document).ready(function() {
 			</div>
 			<div class="clearfix"> </div>
 		</div>
-		
+		<br/>
+						<label class="hvr-sweep-to-right re-set"><a onclick="window.location.href='owner_dashboard.php'" style="padding: 10px 18px; text-decoration: none; display: block; font-size: 17px;">Back</a></label>		
 		
 		<div class="clearfix"> </div>
 		</div>
 	</div>
+
 <?php
 				}
 				?>

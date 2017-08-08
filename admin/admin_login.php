@@ -103,24 +103,24 @@ session_start();
 		<?php
 			if(isset($_POST['submit']))
 			{
-				$name=$_POST['username'];
+				$uname=$_POST['username'];
 				//$_SESSION['name']=$name;
 				$pass=$_POST['password'];
-				/*
-										$qu="SELECT * FROM `sub_admin` where name = '$name'";
+				
+										$qu="SELECT * FROM `main_admin` where uname = '$uname'";
 										$sql = @mysqli_query($connection,$qu);
 										while($row=@mysqli_fetch_array($sql))
 										{
-											$fname=$row['name'];
+											$uname=$row['uname'];
 											$fpass=$_POST['password'];
 										}
-				*/
+				/*
 				$fname="fairowner";
 				$fpass="fairowner@123";
-				
-				if($name==$fname && $pass==$fpass)
+				*/
+				if($uname==$uname && $pass==$fpass)
 				{
-					$_SESSION['superadminname']=$name;
+					$_SESSION['superadminname']=$uname;
 					echo "<script>window.location.href='super_admin_home.php'</script>";
 				}
 				else

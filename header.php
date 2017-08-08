@@ -55,7 +55,7 @@ include('conn.php');
 				
 				
 			    <!-- <li class="hidden-xs" style="background: #29c789; padding: 0.8em 0;" >   --_ANUP-->
-			    <li class="hidden-xs" style="background: #00d5fa; padding: 0.8em 0;" >
+			    <!-- <li class="hidden-xs" style="background: #00d5fa; padding: 0.8em 0;" >
 					<div class="dropdown">
 					  <a  class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-user"> </i>Your Personal Manager<span class="caret" style="display:inline-block"></span></a>
 					  <ul class="dropdown-menu" style="left:auto; right:0; top:35px">
@@ -72,7 +72,6 @@ include('conn.php');
 							?>
 						<li style="display:block"><a href="#" style="color:#000; margin:0;">Mobile: +91 9595567981</a></li>
 						<li style="display:block"><a href="#" style="color:#000;  margin:0;">Email: abitsolutionsin@gmail.com</a></li>
-						<!--<li style="display:block"><a href="logout.php" style="color:#000;  margin:0;">Logout</a></li>	--_ANUP-->
 							<?php
 							}
 							else
@@ -88,27 +87,37 @@ include('conn.php');
 							?>
 						<li style="display:block"><a href="#" style="color:#000; margin:0;">Mobile: <?php echo $mobile ?></a></li>
 						<li style="display:block"><a href="#" style="color:#000;  margin:0;">Email: <?php echo $email ?></a></li>
-						<!--<li style="display:block"><a href="logout.php" style="color:#000;  margin:0;">Logout</a></li>	--_ANUP-->
 							<?php	
 								}
 							?>
 					  </ul>
 					</div>
-				</li>
+				</li>    _ANUP-->
 				
 				<!-- <li onclick="hideicon()" style="background: #29c789; padding: 0.8em 0;">   --_ANUP-->
 				<li onclick="hideicon()" style="background: #00d5fa; padding: 0.8em 0;">
 					<div class="dropdown">
-					  <a  class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-user"> </i>Hi <?php $tname=$_SESSION['name']; echo preg_replace('/\d+/u','',$tname);?> <span class="caret" style="display:inline-block"></span></a>  
-					  <ul class="dropdown-menu" style="left:auto; right:0; top:35px">
+					  <a  class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-user"> </i>Hi <?php $tname=$_SESSION['name']; echo preg_replace('/\d+/u','',$tname);?> <!-- <span class="caret" style="display:inline-block"></span> --></a>  
+					  <!-- <ul class="dropdown-menu" style="left:auto; right:0; top:35px">
 						<li style="display:block"><a href="logout.php" style="color:#000;  margin:0;">Logout</a></li>
-					  </ul>
+					  </ul>  --_ANUP-->
 					</div>	
 						<!-- <div id="hand">
 						<img src="images/hand-up.gif" class="img-responsive" />
 					</div> _ANUP-->
 				</li>
-					  <?php
+				<div class="dropdwn" style="margin-top: 3%;">
+					<button class="dropbtn">
+						<i class="glyphicon glyphicon-menu-hamburger"></i> Menu
+					</button>
+					<!--	<a href="#" class="dropbtn"><i class="glyphicon glyphicon-menu-hamburger"></i> Menu</a>  --_ANUP-->
+					<div class="dropdwn-content">
+						<a href="owner_dashboard.php">Home</a> <a href="about.php">About</a> <a
+							href="contact.php">Contact</a> <a href="why.php">Why
+							RoomsOnRent ?</a> <a href="logout.php">Logout</a>
+					</div>
+				</div>
+				<?php
 						}
 					  ?>
 					  <?php
@@ -116,7 +125,7 @@ include('conn.php');
 						{				
 					  ?>
 				<!-- <li class="hidden-xs" style="background: #29c789; padding: 0.8em 0;">   --_ANUP-->
-				<li class="hidden-xs" style="background: #00d5fa; padding: 0.8em 0;">
+				<!-- <li class="hidden-xs" style="background: #00d5fa; padding: 0.8em 0;">
 					<div class="dropdown">
 					  <a  class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-user"> </i>Your Personal Manager<span class="caret" style="display:inline-block"></span></a>
 					   <ul class="dropdown-menu" style="left:auto; right:0; top:35px">
@@ -134,7 +143,6 @@ include('conn.php');
 							?>
 						<li style="display:block"><a href="#" style="color:#000; margin:0;">Mobile: +91 9595567981</a></li>
 						<li style="display:block"><a href="#" style="color:#000;  margin:0;">Email: abitsolutionsin@gmail.com</a></li>
-						<li style="display:block"><a href="logout.php" style="color:#000;  margin:0;">Logout</a></li>
 							<?php
 							}
 							else
@@ -152,23 +160,36 @@ include('conn.php');
 							?>
 						<li style="display:block"><a href="#" style="color:#000; margin:0;">Mobile: <?php echo $mobile ?></a></li>
 						<li style="display:block"><a href="#" style="color:#000;  margin:0;">Email: <?php echo $email ?></a></li>
-						<li style="display:block"><a href="logout.php" style="color:#000;  margin:0;">Logout</a></li>	
 							<?php	
 								}
 							?>
 					  </ul>
 					</div>
-				</li>
+				</li>   _ANUP-->
 				<!-- <li onclick="hideicon1()" style="background: #29c789; padding: 0.8em 0;">   --_ANUP-->
 				<li onclick="hideicon1()" style="background: #00d5fa; padding: 0.8em 0;">
 					<div class="dropdown">
-					  <a  class="dropdown-toggle" href="tenant_dashboard.php" ><!--data-toggle="dropdown"--><i class="glyphicon glyphicon-user"> </i>Hi <?php $tname=$_SESSION['name']; echo preg_replace('/\d+/u','',$tname); ?> <span class="caret" style="display:inline-block"></span></a>
+					  <a  class="dropdown-toggle" href="#" ><!--data-toggle="dropdown"--><i class="glyphicon glyphicon-user"> </i>Hi <?php $tname=$_SESSION['name']; echo preg_replace('/\d+/u','',$tname); ?> <!-- <span class="caret" style="display:inline-block"></span> --></a>
+					  <!-- <ul class="dropdown-menu" style="left:auto; right:0; top:35px">
+						<li style="display:block"><a href="logout.php" style="color:#000;  margin:0;">Logout</a></li>
+					  </ul>  --_ANUP-->
 					  
 					</div>
 					<!-- <div id="hand">
 						<img src="images/hand-up.gif" class="img-responsive" />
 					</div>  --_ANUP-->
 				</li> 
+				<div class="dropdwn" style="margin-top: 3%;">
+					<button class="dropbtn">
+						<i class="glyphicon glyphicon-menu-hamburger"></i> Menu
+					</button>
+					<!--	<a href="#" class="dropbtn"><i class="glyphicon glyphicon-menu-hamburger"></i> Menu</a>  --_ANUP-->
+					<div class="dropdwn-content">
+						<a href="tenant_dashboard.php">Home</a> <a href="about.php">About</a> <a
+							href="contact.php">Contact</a> <a href="why.php">Why
+							RoomsOnRent ?</a> <a href="logout.php">Logout</a>
+					</div>
+				</div>
 					  <?php
 						}
 					  ?>
@@ -194,7 +215,7 @@ include('conn.php');
 				</li>  
 				</li> ---_ANUP-->
 <div class="dropdwn">
-		<button class="dropbtn"><i class="glyphicon glyphicon-user"> </i> Login </button>
+		<button class="dropbtn-login"><i class="glyphicon glyphicon-user"> </i> Login </button>
 	<!--<a  class="dropdown-toggle dropbtn" href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-user"> </i> Login </a>  --_ANUP-->
 		<div class="dropdwn-content">
 			<a href="login.php?id=1">Are You Owner ?</a>
@@ -216,16 +237,7 @@ include('conn.php');
 			</div>   --_ANUP-->
 
 		
-		<div class="dropdwn" style="margin-top: 3%;">
-			<button class="dropbtn"><i class="glyphicon glyphicon-menu-hamburger"></i> Menu </button>
-		<!--	<a href="#" class="dropbtn"><i class="glyphicon glyphicon-menu-hamburger"></i> Menu</a>  --_ANUP-->
-				<div class="dropdwn-content">
-					<a href="index.php">Home</a>
-					<a href="about.php">About Us</a>
-					<a href="contact.php">Contact Us</a>
-					<a href="why.php">Why RoomsOnRent ?</a>
-				</div>
-		</div>
+		
 			
 
 
@@ -263,11 +275,23 @@ include('conn.php');
 .dropbtn {
     background-color: #00d5fa;
     color: white;
-    padding: 10px;
+    padding: 14px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    margin-top: -15%;
+    margin-bottom: 1px;
+}
+
+.dropbtn-login {
+    background-color: #00d5fa;
+    color: white;
+    padding: 12px;
     font-size: 15px;
     border: none;
     cursor: pointer;
-    margin-top: -10%;
+    margin-top: -1%;
+    margin-bottom: 1px;
 }
 
 .dropdwn {
@@ -286,7 +310,7 @@ include('conn.php');
 
 .dropdwn-content a {
     color: black;
-    padding: 10px 15px;
+    padding: 10px 13px;
     text-decoration: none;
     display: block;
 }

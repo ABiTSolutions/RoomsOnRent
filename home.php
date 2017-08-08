@@ -56,7 +56,7 @@ error_reporting(E_ERROR);
 			<form action="<?php $_SERVER['PHP_SELF'] ?>" method="get" class="filtter" role="form" style="background: rgba(0, 213, 250, 0.26);">
 			  <div class="form-group col-md-2 col-xs-6" style="padding-left:2px; padding-right:2px; margin-bottom:5px">
 				   <label style="font-size: 13px; display: block; text-align: left; margin: 0px 0px 5px 3px;">City</label>
-				  <input type="text" name="city" class="form-control" value="Pune" readonly="" />
+				  <input type="text" name="city" class="form-control" value="Amravati" readonly />
 			  </div>
 			  <div class="form-group col-md-2 col-xs-6" style="padding-left:2px; padding-right:2px; margin-bottom:5px">
 				   <label style="font-size: 13px; display: block; text-align: left; margin: 0px 0px 5px 3px;">Locality</label>
@@ -278,7 +278,7 @@ error_reporting(E_ERROR);
 								if(!empty($array[0]))
 								{
 							?>
-							<img class="hidden-xs" src="images/fairowner.png" style="position:absolute; z-index:9; right:20%; top:3%; height:150px" />
+							<img class="hidden-xs" src="images/logo2black.png" style="position:absolute; z-index:9; right:20%; top:3%; height:150px" />
 							
 							<?php
 							}
@@ -487,7 +487,7 @@ error_reporting(E_ERROR);
 												if(!empty($array[0]))
 												{
 											?>
-											<img class="hidden-xs" src="images/fairowner.png" style="position:absolute; z-index:9; right:20%; top:3%; height:150px" />
+											<img class="hidden-xs" src="images/logo2black.png" style="position:absolute; z-index:9; right:20%; top:3%; height:150px" />
 											
 											<?php
 											}
@@ -613,7 +613,7 @@ error_reporting(E_ERROR);
 													if(!empty($array[0]))
 													{
 												?>
-												<img class="hidden-xs" src="images/fairowner.png" style="position:absolute; z-index:9; right:20%; top:3%; height:150px" />
+												<img class="hidden-xs" src="images/logo2black.png" style="position:absolute; z-index:9; right:20%; top:3%; height:150px" />
 												
 												<?php
 												}

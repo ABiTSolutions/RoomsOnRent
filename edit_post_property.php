@@ -619,8 +619,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="loan-col1">
 				
 				<div class="sub1">
-					<label class="hvr-sweep-to-right"><input type="submit" name="submit" onclick="#" value="Post" placeholder=""></label>
-					<label class="hvr-sweep-to-right re-set"><a onclick="window.location.href='index.php'" style="    padding: 11px 15px;">Back</a>
+					<label class="hvr-sweep-to-right" style="padding: 4px; font-size: 20px;"><input type="submit" name="submit" onclick="#" value="Post" placeholder=""></label>
+					<label class="hvr-sweep-to-right re-set"><a onclick="window.location.href='owner_dashboard.php'" style="padding: 10px 18px; text-decoration: none; display: block; font-size: 17px;">Back</a></label>
 				</div>
 			</div>
 			<!---->

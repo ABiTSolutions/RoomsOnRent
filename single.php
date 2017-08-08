@@ -236,7 +236,7 @@ $(document).ready(function() {
 						<h4>Abuse Property</h4>
 				<p>Click on button if property is abuse</p>
 											<form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-												 <input type="submit" name="abuse" class="hvr-sweep-to-right more" style="background:#27da93; color:#FFF; font-weight:bold; padding:1em" value="Abuse Property" />     
+												 <input type="submit" name="abuse" class="hvr-sweep-to-right more" style="background:#00d5fa; color:#FFF; font-weight:bold; padding:1em" value="Abuse Property" />     
 											</form>
 											<?php
 												

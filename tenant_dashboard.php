@@ -35,7 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!--header-->
 <?php
-			include('head.php');
+			include('header.php');
 			include('bgImage.php');
 ?>
 <!--//-->	
@@ -43,9 +43,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="loan_single">
 	<div class="container">
 		<div class="col-md-12">
-			<div style="position:fixed; z-index:9; right:0; top:40px; margin:15px;">
+			<!-- <div style="position:fixed; z-index:9; right:0; top:40px; margin:15px;">
 				<a href="<?php echo "logout.php"; ?>" class="hvr-sweep-to-right more" style="background:#00d5fa; color:#FFF; font-weight:bold; padding:1em" >Logout</a>     
-			</div>
+			</div>  -->
 			<div style="margin-top:50px">
 			
 		
@@ -69,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									$mid=$row[0];
 								if(empty($mid))
 								{	
-									echo "<b>NAME:</b> &nbsp;&nbsp;&nbsp;&nbsp;Mr. Sagar<br/><b>MOBILE:</b> &nbsp;+91 7350018099<br/> <b>EMAIL:</b> &nbsp;&nbsp;&nbsp;&nbsp;sagar@fairowner.com";
+									echo "<b>NAME:</b> &nbsp;&nbsp;&nbsp;&nbsp;Mr. Anup<br/><b>MOBILE:</b> &nbsp;+91 9595567981<br/> <b>EMAIL:</b> &nbsp;&nbsp;&nbsp;&nbsp;abitsolutionsin@gmail.com";
 								}
 								else
 								{
@@ -102,20 +102,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <!-- left column -->
 	  <div class="col-md-4">
         <div class="text-center">
-          <a href="properties.php?city=Pune&locality=&rent=Select&filter=Apply+Filter">
-		  <img src="images/find.png" class="avatar img-responsive img-circle" alt="">
-          <h3 style="color:#00d5fa;" class="font18">Find Properties</h3>
-		  </a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="text-center">
           <a href="tenant_profile.php">
 		  <img src="images/profile.png" class="avatar img-responsive img-circle" alt="">
           <h3 style="color:#00d5fa;" class="font18">Your Profile</h3>
 		  </a>
         </div>
       </div>
+	  <div class="col-md-4">
+        <div class="text-center">
+          <a href="properties.php?city=Pune&locality=&rent=Select&filter=Apply+Filter">
+		  <img src="images/find.png" class="avatar img-responsive img-circle" alt="">
+          <h3 style="color:#00d5fa;" class="font18">Find Properties</h3>
+		  </a>
+        </div>
+      </div>
+      
 	 <!--<div class="col-md-4">
         <div class="text-center">
           <a href="logout.php">
@@ -133,9 +134,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		{
 				$pd_id=$row['pd_id'];
 		}
-		if($pd_id==1)
+	/* if($pd_id==1)
 		{
-	?>
+	?> --_ANUP-->
 	  
 	 <!-- <div class="col-md-4">
         <div class="text-center">
@@ -204,22 +205,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
       </div>  --_ANUP-->
 	<?php	
-	}    
+	}    _ANUP*/
 	
-	if($pd_id==1)
+	/*if($pd_id==1)
 	{
 	?>
-	<!--	<div class="col-md-4">
+		<div class="col-md-4">
         <div class="text-center">
           <a href="not_plan2.php">
 		  <img src="images/plan.png" class="avatar img-responsive img-circle" alt="">
           <h3 style="color:#00d5fa;" class="font18">Plan</h3>
 		  </a>
         </div>
-      </div>  --_ANUP-->
+      </div>  
 	<?php	
-	}
-	else
+	} _ANUP*/
+	/* else _ANUP*/
 	{
 	?>	
 	  
